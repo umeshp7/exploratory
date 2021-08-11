@@ -1,6 +1,7 @@
 openapi: 3.0.0
 info:
   title: Exploratory Demo API
+  version: 0.0.1
   description: Simple API to demo the API Builder in Postman
   contact:
     name: Arlemi Turpault
@@ -12,7 +13,7 @@ paths:
   /videos:
     get:
       operationId: allVideos
-      summary: 
+      summary: List all videos
       description: Returns a list of all the Exploratory videos
       tags:
         - videos
@@ -22,9 +23,31 @@ paths:
           content:
             application/json:
               schema:
-                type: aray
+                type: array
                 items:
                   $ref: "#/components/schemas/video"
+  /videos/{videoId}:
+    get:
+      operationId: oneVideo
+      summary: Fetch one video by ID 
+      description: Get a single video
+      tags:
+        - videos
+      parameters:
+      - name: videoId
+        in: path
+        required: true
+        schema:
+          type: number
+          example: 4
+
+      responses:
+        '200':
+          description: List of videos
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/video"
 
 components:
   schemas:
