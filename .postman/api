@@ -13,10 +13,9 @@ rootDirectory = postman/schemas
 files[] = {"path":"components/error.yml","metaData":{}}
 files[] = {"path":"components/pets.yml","metaData":{}}
 files[] = {"path":"FROM_PULLL.json","metaData":{}}
+files[] = {"path":"New feature branch/New.json","metaData":{}}
 files[] = {"path":"New.yml","metaData":{}}
 files[] = {"path":"openapi.yml","metaData":{}}
-files[] = {"path":"paths/pet.yml","metaData":{}}
-files[] = {"path":"paths/pets.yml","metaData":{}}
 
 [relations.apiDefinition.metaData]
 type = openapi:3
